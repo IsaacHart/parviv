@@ -20,8 +20,9 @@
 (move.rule) Moving one space requires a movement power of 1.
 (move.rule.vertex) Given that paths have 2 components the player may choose whichever he likes. In the case of a non-player assume the path of lleast resistance.
 //(move.rule.center) Given that paths take you from one terrain to an entire new one you recieve all effects of all terrains on your path.
-(move.rule.roygbp) Include.++(move.rule.|blue,purple|)
+(move.rule.roygbp) Include.++(move.rule.blue|purple)
 (move.rule.blue) Impassable.
 (move.rule.purple) Roll value--.
 (space.rule.blue) A piece coming to rest on a blue space is lost.
-(win.rule.
+(win.rule.anihilation) Player wins when their pieces are the only ones left on the board.
+(win.rule.5quests) Player wins when they reach 5 completed quests.
