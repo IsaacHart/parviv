@@ -3,6 +3,9 @@
 (tile.set.roygbp) Tiles consist of red, orange, yellow, green, blue, purple.
 (tile.rule.roygbp) Basic gameplay would include 4 green and 3 of each else.
 (card.rule) Cards in general are kept in their own sets. At the begining of each play they are shuffled and stacked.
+(card.type.spell) Can be used whenever, effect printed on card.
+(card.type.quest) When parameters are met can be collected to count towards your quest score.
+(card.type.artifact) Immediately equipped when drawn, effect not optional.
 (piece.def) Pieces refer to any object that will take up a space on the board.
 (piece.rule.player) Each player should have a distinct set of pieces.
 (piece.rule.non-player) One set should be set asside to represent non-player entities.
