@@ -4,13 +4,30 @@
 (tile.rule.roygbp) Basic gameplay would include 4 green and 3 of each else.
 (card.rule) Cards in general are kept in their own sets. At the begining of each play they are shuffled and stacked.
 (card.type.spell) Can be used whenever, effect printed on card.
+(spell.rule.5n1) Each player get 4 spell cards at the begining of the game and may draw one during their draw phase. They may hold a maximum of 5.
 (card.type.quest) When parameters are met can be collected to count towards your quest score.
-(card.type.artifact) Immediately equipped when drawn, effect not optional.
+(quest.rule.turn) May only collect quest card on their turn, but at any point during their turn.
+(quest.rule.mulligan) A quest that is impossible for everyone at their current level of abilities may be discarded but a new one may not be drawn until draw parameters and next met. If the card is private it must only be impossible for the owner and it must first be revealed to everyone.
+(quest.rule.public) Quest card is placed face up on top of quest deck at the begining of maps upkeep phase. First player to complete collects it. A new card is only revealed when the previous card has been collected therefore there are no public quests AND it is the maps upkeep phase.
+(quest.rule.private) If player starts their turn with no quest cards they may draw one during their draw phase. They are the only ones who may collect it.
+(card.type.artifact) Immediately equipped when drawn. Effect not optional.
+(card.type.race) Dealt to players as the begining of game. Effects not optional.
 (piece.def) Pieces refer to any object that will take up a space on the board.
+(piece.type.hero) Capable of movement and combat.
+(piece.type.village) Capable of combat and NOT movement.
+(village.rule.1hero) Owner may spawn hero at begining of turn but each village may only have one hero at any given time.
+(piece.type.mob) Capable of combat and movement, both automated. Priority 1, non-owner piece 1 path away, attempts to track and move to and attack piece. Priority 2, owner hero 1 path away, attempts to move to hero. Else, paths randomly and attempts to move.
+(piece.type.den) Not capable of combat or movement.
+(den.rule.spawn) During owners (typically belongs to map) upkeep roll to spawn. Limit of 5 per den at any given time.
 (piece.rule.player) Each player should have a distinct set of pieces.
 (piece.rule.non-player) One set should be set asside to represent non-player entities.
 
-
+(void.def) The space off the edge of the board.
+//(void.rule.wall) No paths exist past the edge of the board.
+//(void.rule.yellow) Spaces exist for two tiles in every direction off the edge of the board. These tiles are considered yellow, except, any piece ending its turn on these is lost.
+//(void.rule.void) Spaces exist infinitely in every direction but even attempting to move into one causes loss of unit.
+//(void.rule.sky) Spaces exist infinitely in every direction but even attempting to move into one causes unit to fall to it's death.
+(void.rule.blue) Spaces exist for two tiles in every direction off the edge of the board. These tiles are considered blue. Outside these alotted tiles no more paths exist.
 (north.rule.vertex) A north must be chosen facing a vertex, NOT a side. In case of disupte it will be decided by a roll.
 (space.def) Space refers to any place pieces come to rest.
 (space.rule.vertex) Valid spaces are vertexes.
@@ -18,14 +35,14 @@
 (path.def) Path refers to the distance between any adjacent spaces.
 //(path.rule.center) This is the center of one tile to the center of any adjacent tile.
 (path.rule.vertex) This is one corner of a tile to an adjacent corner.
-(path.rule.vertex+center) This is from the edge of a tile to the center or from the center to any corner.
+(path.rule.vertexncenter) This is from the edge of a tile to the center or from the center to any corner.
 (move.def) Movement is defined as transfering a piece from one space to another along a path.
 (move.rule) Moving one space requires a movement power of 1.
-(move.rule.vertex) Given that paths have 2 components the player may choose whichever he likes. In the case of a non-player assume the path of lleast resistance.
+(move.rule.vertex) Given that paths have 2 components the player may choose whichever he likes. In the case of a non-player assume the path of least resistance.
 //(move.rule.center) Given that paths take you from one terrain to an entire new one you recieve all effects of all terrains on your path.
-(move.rule.roygbp) Include.++(move.rule.blue|purple)
+(move.rule.roygbp) Include.(move.rule.blue|purple)
 (move.rule.blue) Impassable.
-(move.rule.purple) Roll value--.
+(move.rule.purple) Move roll value--.
 (space.rule.blue) A piece coming to rest on a blue space is lost.
 (win.rule.anihilation) Player wins when their pieces are the only ones left on the board.
 (win.rule.5quests) Player wins when they reach 5 completed quests.
