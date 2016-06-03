@@ -1,3 +1,27 @@
-Tiles are mixed together and arranged into desired shape in random order. A north must be chosen facing a vertex, NOT a side. In case of disupte it will be decided by a roll.
-Tiles consist of red, orange, yellow, green, blue, purple. Basic gameplay would include 4 green and 3 of each else.
+(board.rule.tile) Board is made of tiles.
+(tile.rule.random) Tiles are mixed together and arranged into desired shape in random order.
+(tile.set.roygbp) Tiles consist of red, orange, yellow, green, blue, purple.
+(tile.rule.roygbp) Basic gameplay would include 4 green and 3 of each else.
+(card.rule) Cards in general are kept in their own sets. At the begining of each play they are shuffled and stacked.
+(piece.def) Pieces refer to any object that will take up a space on the board.
+(piece.rule.player) Each player should have a distinct set of pieces.
+(piece.rule.non-player) One set should be set asside to represent non-player entities.
 
+
+(north.rule.vertex) A north must be chosen facing a vertex, NOT a side. In case of disupte it will be decided by a roll.
+(space.def) Space refers to any place pieces come to rest.
+(space.rule.vertex) Valid spaces are vertexes.
+(space.rule.center) Valid spaces are the center of tiles.
+(path.def) Path refers to the distance between any adjacent spaces.
+//(path.rule.center) This is the center of one tile to the center of any adjacent tile.
+(path.rule.vertex) This is one corner of a tile to an adjacent corner.
+(path.rule.vertex+center) This is from the edge of a tile to the center or from the center to any corner.
+(move.def) Movement is defined as transfering a piece from one space to another along a path.
+(move.rule) Moving one space requires a movement power of 1.
+(move.rule.vertex) Given that paths have 2 components the player may choose whichever he likes. In the case of a non-player assume the path of lleast resistance.
+//(move.rule.center) Given that paths take you from one terrain to an entire new one you recieve all effects of all terrains on your path.
+(move.rule.roygbp) Include.++(move.rule.|blue,purple|)
+(move.rule.blue) Impassable.
+(move.rule.purple) Roll value--.
+(space.rule.blue) A piece coming to rest on a blue space is lost.
+(win.rule.
