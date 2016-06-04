@@ -6,12 +6,12 @@
 (tile.set.city) Tiles are grey.
 (north.rule.vertex) A north must be chosen facing a vertex, NOT a side. In case of disupte it will be decided by a roll.
 
-(card.rule) Cards in general are kept in their own sets. At the begining of each play they are shuffled and stacked.
+(card.rule) Cards are kept in stacks with other cards of the same type. At the begining of each game they are shuffled and stacked.
 (card.type.spell) Can be used whenever, effect printed on card.
 (spell.rule.5n1) Each player gets 4 spell cards at the begining of the game. If they have fewer than 5 at the begining of their turn they may draw one during their upkeep.
 (card.type.quest) When parameters are met can be collected to count towards your quest score.
 (quest.rule.turn) May only collect quest card on their turn, but at any point during their turn.
-(quest.rule.mulligan) A quest that is impossible for everyone at their current level of abilities may be discarded but a new one may not be drawn until draw parameters and next met, the discarded card is not added back into the mix for the remaining duration of this game. If the card is private it must only be impossible for the owner and it must first be revealed to everyone and it is added back into the mix, even if it is impossible for everyone..
+(quest.rule.mulligan) A quest that is impossible for everyone at their current level of abilities may be discarded but a new one may not be drawn until draw parameters and next met, the discarded card is not added back into the mix for the remaining duration of this game. If the card is private it must only be impossible for the owner and it must first be revealed to everyone and it is added back into the mix, even if it is impossible for everyone.
 (quest.rule.public) Quest card is placed face up on top of quest deck at the begining of maps upkeep phase. First player to complete collects it. A new card is only revealed when the previous card has been collected therefore there are no public quests AND it is the maps upkeep phase.
 (quest.rule.private) If player starts their turn with no quest cards they may draw one during their draw phase. They are the only ones who may collect it.
 (card.type.artifact) Immediately equipped when drawn. Effect not optional.
@@ -45,8 +45,8 @@
 (path.rule.vertex) This is one corner of a tile to an adjacent corner.
 (path.rule.vertexncenter) This is from the vertex of a tile to the center or from the center to any corner.
 (path.rule.random) Roll d6, 1 is north, 2 is north-east, continue clockwise.
-(path.rule.track) Roll d6, 2-5 paths to target, 1 paths counterclockwise of target, 6 paths clockwise of target.
-(path.rule.track.poor) Roll d6, 3-4 paths to target, 1-2 paths counterclockwise of target, 5-6 paths clockwise of target. 0 paths backwards.
+(path.rule.track) Roll d6, 2-5 paths to target, 1 paths counterclockwise of target, 6 paths clockwise of target. Values less than 1 path backwards.
+(path.rule.track.poor) Roll d6, 3-4 paths to target, 1-2 paths counterclockwise of target, 5-6 paths clockwise of target. Values less than 1 path backwards.
 (path.rule.yellow) When terrain in all directions is yellow unit must declare target destination then attempt track. Units moving randomly are exempt.
 
 (move.def) Movement is defined as transfering a piece from one space to another along a path. If movement is defined by a vector consider the move component to be the magnitude.
@@ -65,7 +65,7 @@
 (combat.def) Battle between units with different owners.
 (combat.rule.lock) Combat lasts until one side is defeated or escapes.
 (combat.rule.start) Combat starts when initiated by either side. Non-player units always initiate.
-(combat.rule.range) The player who moves into range has the first choice to initiate combat. If they choose not to any other party in range may still choose to initiate before players turn continues.
+(combat.rule.range) The player who moves into range has the first choice to initiate combat. If they choose not to the owner of any other unit in range may still choose to initiate before players turn continues.
 
 (win.rule.anihilation) Player wins when their pieces are the only ones left on the board.
 (win.rule.5quests) Player wins when they reach 5 completed quests.
