@@ -54,13 +54,18 @@
 (move.rule.vertex) Given that paths have 2 components the player may choose whichever he likes. In the case of automated movement assume the path of least resistance.
 //(move.rule.center) Given that paths take you from one terrain to an entire new one you recieve all effects of all terrains on your path.
 (move.rule.roygbp) Include.(move.rule.blue|purple)
-(move.rule.blue) Move roll result set to 0.
+(move.rule.blue) Move roll value -5. Move roll result -2.
 (move.rule.purple) Move roll value--.
 (move.rule.grey) Move roll value++.
 
 (roll.def) Always d6.
 (roll.value.def) The die number on the roll.
 (roll.result.def) The resulting power of skill associated with rolled value. Most often represented by a grid depicting each roll value and below it the associated result. The most basic version is 1-2-3-4-5-6,0-1-1-1-1-2. Any roll value of less than 1 has a result of 0. Any roll value greater than 6 has the same result as the value of 6.
+
+(combat.def) Battle between units with different owners.
+(combat.rule.lock) Combat lasts until one side is defeated or escapes.
+(combat.rule.start) Combat starts when initiated by either side. Non-player units always initiate.
+(combat.rule.range) The player who moves into range has the first choice to initiate combat. If they choose not to any other party in range may still choose to initiate before players turn continues.
 
 (win.rule.anihilation) Player wins when their pieces are the only ones left on the board.
 (win.rule.5quests) Player wins when they reach 5 completed quests.
