@@ -1,0 +1,9 @@
+(piece.def) Pieces refer to any object that will take up a space on the board.
+(piece.type.hero) Capable of movement and combat.
+(piece.type.village) Capable of combat and NOT movement.
+(village.rule.1hero) Owner may spawn hero from village during their turns upkeep but each village may only have one hero at any given time.
+(piece.type.mob) Capable of combat and movement, both automated. Priority 1, non-owner piece 1 path away, attempts to track and move to and attack piece. Priority 2, owner hero 1 path away, attempts to move to hero. Else, paths randomly and attempts to move.
+(piece.type.den) Not capable of combat or movement.
+(den.rule.spawn) During owners upkeep roll to spawn. Limit of 5 per den at any given time.
+(piece.rule.player) Each player should have a distinct set of pieces.
+(piece.rule.non-player) One set should be set asside to represent non-player entities.

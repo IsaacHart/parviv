@@ -1,0 +1,23 @@
+(space.def) Space refers to any place pieces come to rest.
+(space.rule.vertex) Valid spaces are vertexes.
+(space.rule.center) Valid spaces are the center of tiles.
+(space.rule.blue) A piece coming to rest on a blue space is lost.
+(space.rule.vertex) Given that spaces can have up to 3 components the player may choose whichever he likes. In the case of automated movement assume any safe space if possible.
+
+(path.def) Path refers to the distance between any adjacent spaces. If movement is defined by a vector consider the component path to be the direction.
+//(path.rule.center) This is the center of one tile to the center of any adjacent tile.
+(path.rule.vertex) This is one corner of a tile to an adjacent corner.
+(path.rule.vertexncenter) This is from the vertex of a tile to the center or from the center to any corner.
+(path.rule.random) Roll d6, 1 is north, 2 is north-east, continue clockwise.
+(path.rule.track) Roll d6, 2-5 paths to target, 1 paths counterclockwise of target, 6 paths clockwise of target. Values less than 1 path backwards.
+(path.rule.track.poor) Roll d6, 3-4 paths to target, 1-2 paths counterclockwise of target, 5-6 paths clockwise of target. Values less than 1 path backwards.
+(path.rule.yellow) When terrain in all directions is yellow unit must declare target destination then attempt track. Units moving randomly are exempt.
+
+(move.def) Movement is defined as transfering a piece from one space to another along a path. If movement is defined by a vector consider the move component to be the magnitude.
+(move.rule) Moving one space requires a movement power of 1.
+(move.rule.vertex) Given that paths have 2 components the player may choose whichever he likes. In the case of automated movement assume the path of least resistance.
+//(move.rule.center) Given that paths take you from one terrain to an entire new one you recieve all effects of all terrains on your path.
+(move.rule.roygbp) Include.(move.rule.blue|purple)
+(move.rule.blue) Move roll value -5. Move roll result -2.
+(move.rule.purple) Move roll value--.
+(move.rule.grey) Move roll value++.

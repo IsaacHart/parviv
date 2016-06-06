@@ -1,0 +1,2 @@
+(win.rule.anihilation) Player wins when their pieces are the only ones left on the board.
+(win.rule.5quests) Player wins when they reach 5 completed quests.
