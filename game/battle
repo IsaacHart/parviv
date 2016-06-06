@@ -1,0 +1,11 @@
+(battle.def) Rounds of combat between units with different owners. Exception if units are owned by map they may still battle.
+(battle.rule.lock) Battle lasts until one side is defeated or escapes.
+(battle.rule.start) Battle starts when initiated by any one. Non-player units always choose to initiate when they have the option.
+(battle.rule.range) The player who moves into range has the first choice to initiate battle. If they choose not to the owner of any other unit in range may still choose to initiate before players turn continues.
+(battle.rule.agro) The initiator becomes the first rounds aggressor and forces the other player to be the first rounds defender. Aggressor wins tactic ties.
+(battle.rule.defend) Defender gets -2 to all roll values but wins combat ties.
+(battle.rule.dice) First the aggressor then the defender declare which of their alotted dice they are assigning to which roll type, combat, tactics, or escape (defense only). Any types not alotted to are given a default roll value of -2. Mobs always choose all combat dice when agressor and all tactic dice when defender.
+(battle.rule.combat) Winner of combat roll deals deamage equivalent to the different in the combat results to the other party. Ties deal 1 damage to the aggressor.
+(battle.rule.tactic) Winner of tactic roll becomes aggressor during the next round.
+(battle.rule.escape) A defender-only option that has to beat the aggressors tactic roll to succeed. Success breaks battle lock.
+(battle.rule.health) Heros have 5 health, mobs have 3.
