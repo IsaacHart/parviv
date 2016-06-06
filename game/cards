@@ -1,6 +1,7 @@
 (card.rule) Cards are kept in stacks with other cards of the same type. At the begining of each game they are shuffled and stacked.
 (card.type.spell) Can be used whenever, effect printed on card.
 (spell.rule.5n1) Each player gets 4 spell cards at the begining of the game. If they have fewer than 5 at the begining of their turn they may draw one during their upkeep.
+(card.type.magic) Spell cards except they have stronger effects and cost mana to draw and something also cost mana to use.
 (card.type.quest) When parameters are met can be collected to count towards your quest score.
 (quest.rule.turn) May only collect quest card on their turn, but at any point during their turn.
 (quest.rule.mulligan) A quest that is impossible for everyone at their current level of abilities may be discarded but a new one may not be drawn until draw parameters and next met, the discarded card is not added back into the mix for the remaining duration of this game. If the card is private it must only be impossible for the owner and it must first be revealed to everyone and it is added back into the mix, even if it is impossible for everyone.
