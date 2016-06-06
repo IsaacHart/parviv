@@ -1,2 +1,3 @@
+(mana.def) Pips that represent the terrain they were collected from used as currency for certain actions.
 (mana.rule.collect) At the end of your turn you may roll to collect mana from any terrain touching your space.
 (mana.rule.roygbp) The mana types are red, orange, yellow, green, blue, purple.
